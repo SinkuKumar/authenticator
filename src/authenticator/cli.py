@@ -773,13 +773,12 @@ class CLI:
             first_time = False
             if (self._stdin_is_tty() and
                     sys.stdin is self.__stdin):
-                pp = getpass.getpass(
-                    "Enter passphrase: ", stream=self.__stdout)
+                pp = "Hello" # getpass.getpass("Enter passphrase: ", stream=self.__stdout)
             else:
                 print(
                     "Enter passphrase: ",
                     end="", flush=True, file=self.__stdout)
-                pp = self.__stdin.readline().strip()
+                pp = "Hello" # self.__stdin.readline().strip()
             pp = pp.strip()
             # If no passphrase, then get out
             #
